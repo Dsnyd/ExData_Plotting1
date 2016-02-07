@@ -1,0 +1,10 @@
+#####Plot 2
+#####concatenate Date and Time
+
+power$DateTime <- strptime(paste(power$Date, power$Time),format="%d/%m/%Y %H:%M:%S")
+
+plot(power$DateTime,power$Global_active_power,ylab="Global Active Power (kilowatts)",xlab="", type="l")
+
+png("plot2")
+dev.off()
+
